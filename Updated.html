@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <style>
+     h2 {
+        text-align: center;
+     }   
+    </style>
+</head>
+<body>
+    <h2>STUDENT DETAILS FORM</h2>
+    <script>
+    function printError(elemId, hintMsg) {
+        document.getElementById(elemId).innerHTML = hintMsg;
+    }
+</script>
+<script>
+    function display()
+    {
+    document.getElementById("displayarea").innerHTML = document.getElementById("fname").value; 
+    document.getElementById("fname").value = "";
+    document.getElementById("displayarea1").innerHTML = document.getElementById("lname").value; 
+    document.getElementById("lname").value = "";
+    
+    }
+    </script>
+</script>
+    
+    <label>SALUATION</label>
+    <select name="saluation" id="choose" required>
+        <option value="Choose">Options</option>
+        <option value="mr">MR</option>
+        <option value="mrs">MRS</option>
+        <option value="dr">DR</option>
+        <option value="prof">PROF</option>
+    </select><br><br>
+    <!-- <input type="option" value="MRS"><br><br> -->
+    <form action="connect.php" method="POST">
+    <label>FIRST NAME:</label>
+    <input type="text" name="username" placeholder="Your name " pattern="[A-Za-z\s]{0,50}" required title="Pleace Enter Alphabet Characters Only"/><br><br>
+    
+    <label>LAST NAME</label>
+    <input type="text" name="user name" placeholder="Your Lname" pattern="[A-Za-z\s]{0,50}" required title="Pleace Enter Alphabet Characters Only"/><br><br>
+    
+    <label>DATE OF BIRTH</label>
+    <input type="date" required><br><br>
+
+    <label>LANGUAGE KNOWN</label>
+    <textarea rows="1" cols="50" name="comment" form="usrform"
+        placeholder="Enter text here..."></textarea><br><br>
+
+        <label >GENDER</label>
+        <input type="radio" name="gender" value="male" required>Male
+        <input type="radio" name="gender" value="female" required>Female<br><br>    
+
+    <label>QUALIFICATION</label>
+       <select name="department" id="Department" >
+        <option value="choose">Choose</option>
+        <option value="eee">EEE</option>
+        <option value="ece">ECE</option>
+        <option value="it">IT</option>
+        <option value="mech">MECHANICAL</option>
+        <option value="mca">MCA</option>
+        <option value="mtech">M.TECH</option>
+    </select><br><br>
+
+    <label>EMAIL</label>
+    <form action="/action_page.php">
+        <input type="email" required >
+        
+     <br><br>
+
+    <label>PASSWORD</label>
+    <input type="password" name="pswd" id="pswd"  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$">
+    <i class="far fa-eye" id="togglePassword"></i><br><br>
+
+    <input type="submit" onClick="display()">
+    </form><br><br>
+    <script>
+    
+    
+</script>
+
+    <div id="preview_data" title="Preview form data" style="display:none;"></div>
+
+      
+    </div>
+
+  
+    
+</body>
+</html>
