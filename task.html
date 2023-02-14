@@ -1,0 +1,70 @@
+<html>
+    <head>
+    <title>JAVASCRIPT</title>
+    </head>
+    <body>
+        <h3>NUMARRAY TASK</h3>
+        <p>Values are printed in the console.</p>
+        <script>
+            //To declaring an array of values 
+            const num_array = [10,12,15,36,34,245,45,33,155,28,448,51,26,7,4,88,90,21,77,120];
+            num1 = num_array.sort(function(a, b){return a - b});
+            console.log(num1);
+            //To seperate an array in odd and even 
+            function Seperate(array){
+                const odd = num1.filter (num => num%2 ===1);
+                const even = num1.filter (num => num%2 ===0);
+                return{
+                    odd:odd, even:even
+                }
+            }
+            console.log(Seperate(num1));
+            const oddNum = [];
+            num_array.forEach((num) => {
+                if (num % 2 === 1) {
+                    oddNum.push(num);
+                }
+            });
+            console.log(oddNum);
+           const evenNum = [];
+            num_array.forEach((num) => {
+                if (num % 2 === 0) {
+                    evenNum.push(num);
+                }
+            });
+            console.log(evenNum);
+            //Divide the odd array first value with 5
+            const div5 = [];
+            oddNum.forEach((num1) => {
+                if (num1 % 5 === 0) {
+                    div5.push(num1);
+                }
+            });
+            console.log(div5);
+            const Element1 = oddNum.find( element => element % 5 === 0);
+            console.log("The first element divisible by 5 is :");
+            console.log(Element1);
+            var index = (element) => element % 5 === 0;
+            //To find the index value
+            console.log("The index number of the Number is :");
+            console.log(oddNum.findIndex(index));
+            //Push 18 
+            console.log(evenNum.push(18));
+            console.log(evenNum);
+            
+            num2 = evenNum.sort(function(a, b){return a - b});
+            console.log(num2);
+
+            num2 = evenNum.sort(function(a, b){return b - a});
+            console.log(num2);
+            num2.shift();
+            num2.pop();
+            console.log(num2);
+            console.log("The index of elements 18,33,88,245,45 are: ")
+            console.log(evenNum.indexOf(18));
+            console.log(oddNum.indexOf(33));
+            console.log(evenNum.indexOf(88));
+            console.log(oddNum.indexOf(245));
+            console.log(oddNum.indexOf(45));
+            </script>
+    </body>
